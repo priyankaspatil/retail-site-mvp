@@ -1,8 +1,8 @@
-import { Grid } from "@material-ui/core";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Grid } from "@material-ui/core";
 import logo from "../../public/images/ShoppingLogo1.jpeg";
-import './Header.scss';
+import "./Header.scss";
 
 export default function Header() {
   const getClass = ({ isActive }) => (isActive ? "nav-active" : null);
@@ -30,7 +30,6 @@ export default function Header() {
           </NavLink>
         </nav>
       </Grid>
-
     </header>
   );
 }

@@ -1,33 +1,34 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import Categories from './components/Categories'
-import Header from './components/Header'
-import { Routes, Route } from 'react-router-dom'
-import './App.scss'
-import { ProductDetails } from './components/ProductDetails'
-import Products from './components/Products'
+import React, { useState } from "react";
+import { useNavigate, Routes, Route } from "react-router-dom";
+import Categories from "./components/Categories";
+import Header from "./components/Header";
+import { ProductDetails } from "./components/ProductDetails";
+import Products from "./components/Products";
+import "./App.scss";
 
 const App = () => {
-  const [favorites, setFavorites] = useState([])
-  const navigate = useNavigate()
+  const [favorites, setFavorites] = useState([]);
+  const navigate = useNavigate();
 
   const addToFavorites = (item) => {
-    const favoriteExists = favorites.find((favorite) => favorite.id === item.id)
+    const favoriteExists = favorites.find(
+      (favorite) => favorite.id === item.id
+    );
 
     if (!favoriteExists) {
-      setFavorites([...favorites, item])
+      setFavorites([...favorites, item]);
     } else {
       const newFavorites = favorites.filter(
-        (favorite) => favorite.id !== item.id,
-      )
-      setFavorites([...newFavorites])
+        (favorite) => favorite.id !== item.id
+      );
+      setFavorites([...newFavorites]);
     }
-  }
+  };
 
   const showProductDetails = (e, item) => {
-    e.preventDefault()
-    navigate('/productDetails', { state: { item: item } })
-  }
+    e.preventDefault();
+    navigate("/productDetails", { state: { item: item } });
+  };
 
   return (
     <>
@@ -64,7 +65,7 @@ const App = () => {
         />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
