@@ -21,7 +21,7 @@ const Products = ({ items, showProductDetails, favorites, addToFavorites }) => {
                 component="img"
                 height="194"
                 image={item.image}
-                alt={item.name}
+                alt={`${item.name} image`}
                 className="card--product__media"
                 onClick={(e) => showProductDetails(e, item)}
               />
@@ -30,10 +30,7 @@ const Products = ({ items, showProductDetails, favorites, addToFavorites }) => {
                   aria-label="add to favorites"
                   onClick={() => addToFavorites(item)}
                 >
-                  <FavoriteIcon
-                    className={isfavorite ? "like" : ""}
-                    style={{ color: isfavorite ? "red" : "gray" }}
-                  />
+                  <FavoriteIcon className={isfavorite ? "like" : ""} />
                 </IconButton>
               </CardActions>
             </Card>

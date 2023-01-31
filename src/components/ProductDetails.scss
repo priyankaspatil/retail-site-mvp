@@ -2,6 +2,7 @@
     .product_detail--img-grid {
         display: flex;
         justify-content: center;
+        width: calc(100% - 350px);
     }
 
     .product_description {

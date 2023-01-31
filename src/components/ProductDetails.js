@@ -11,7 +11,7 @@ export const ProductDetails = ({ addToFavorites, favorites }) => {
   return (
     <Grid container className="product_detail-container">
       <Grid item xs={12} md={6} mt={4} className="product_detail--img-grid">
-        <img src={item.image} alt="" />
+        <img src={item.image} alt={`${item.name} image`} />
       </Grid>
       <Grid item xs={12} md={6} mb={4}>
         <Grid item mb={4}>
