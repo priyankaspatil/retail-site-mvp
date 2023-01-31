@@ -1,0 +1,10 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+.card-product {
+    .products__not--found {
+        @include data-not-found;
+      }
+    .delete__icon:hover {
+        color: $delete-icon-color;
+    }
+}

@@ -1,8 +1,20 @@
+@import '../styles/variables';
+
 .product_detail-container {
     .product_detail--img-grid {
         display: flex;
         justify-content: center;
         width: calc(100% - 350px);
+    }
+
+    .btn {
+        margin: 0 20px;
+    }
+    .add-to-cart__button {
+        color: $add-to-cart-btn;
+    }
+    .add-to-wishlist__button {
+        color: $add-to-wishlist-btn;
     }
 
     .product_description {
