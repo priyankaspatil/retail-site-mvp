@@ -1,0 +1,11 @@
+@import './variables';
+
+@mixin vertical-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin data-not-found {
+   color: $not-found-color;
+}

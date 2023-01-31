@@ -1,0 +1,15 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+.wrapper {
+    background-color: $background-color;
+    color: $text-color;
+    padding: $block-padding;
+    body {
+        margin: 0;
+        color: #222;
+        font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif, 'fantasy';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+}
