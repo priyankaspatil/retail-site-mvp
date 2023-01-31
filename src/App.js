@@ -41,6 +41,7 @@ const App = () => {
               deviceType="desktop"
               favorites={favorites}
               showProductDetails={showProductDetails}
+              addToFavorites={addToFavorites}
             />
           }
         />
@@ -60,6 +61,7 @@ const App = () => {
               items={favorites}
               showProductDetails={showProductDetails}
               favorites={favorites}
+              addToFavorites={addToFavorites}
             />
           }
         />

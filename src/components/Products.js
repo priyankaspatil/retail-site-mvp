@@ -3,7 +3,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Grid, IconButton, CardActions, CardMedia, Card } from "@mui/material";
 import "./Products.scss";
 
-const Products = ({ items, showProductDetails, favorites }) => {
+const Products = ({ items, showProductDetails, favorites, addToFavorites }) => {
   return (
     <Grid
       container
@@ -16,21 +16,20 @@ const Products = ({ items, showProductDetails, favorites }) => {
             (favorite) => favorite.id === item.id
           );
           return (
-            <Card
-              sx={{ maxWidth: 345 }}
-              key={item.id}
-              onClick={(e) => showProductDetails(e, item)}
-              className="card-product"
-            >
+            <Card sx={{ maxWidth: 345 }} key={item.id} className="card-product">
               <CardMedia
                 component="img"
                 height="194"
                 image={item.image}
                 alt={item.name}
                 className="card--product__media"
+                onClick={(e) => showProductDetails(e, item)}
               />
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+                <IconButton
+                  aria-label="add to favorites"
+                  onClick={() => addToFavorites(item)}
+                >
                   <FavoriteIcon
                     className={isfavorite ? "like" : ""}
                     style={{ color: isfavorite ? "red" : "gray" }}

@@ -7,7 +7,12 @@ import { Typography, Grid } from "@mui/material";
 import { responsive } from "../helper/Categories";
 import "./Categories.scss";
 
-const Categories = ({ deviceType, favorites, showProductDetails }) => {
+const Categories = ({
+  deviceType,
+  favorites,
+  showProductDetails,
+  addToFavorites,
+}) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -53,6 +58,7 @@ const Categories = ({ deviceType, favorites, showProductDetails }) => {
                 items={category.items}
                 showProductDetails={showProductDetails}
                 favorites={favorites}
+                addToFavorites={addToFavorites}
               />
             </Carousel>
           </Grid>
