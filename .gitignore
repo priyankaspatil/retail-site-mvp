@@ -1,0 +1,13 @@
+node_modules
+
+# Web workbench (sass)
+.sass-cache/
+
+# Coverlet is a free, cross platform Code Coverage Tool
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml

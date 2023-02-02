@@ -10,17 +10,15 @@
     width: 100%;
     padding: 10px;
     margin: 0 20px;
-    cursor: 'pointer';
+    cursor: "pointer";
 
     .like {
-        color: $favorite-color;
+      color: $favorite-color;
     }
     .favorite__icon:hover {
       color: $favorite-color;
     }
   }
-
-  
 
   .products__not--found {
     // color: $not-found-color;
